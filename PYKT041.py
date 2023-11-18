@@ -1,11 +1,7 @@
 n = int(input())
 ans = 0
 
-def comb(x):
-    if x < 2:
-        return 0
-    else:
-        return x * (x - 1) // 2
+comb = lambda x: 0 if x < 2 else x * (x - 1) // 2
 
 rows = [0] * n
 cols = [0] * n
@@ -18,4 +14,4 @@ for r in range(n):
 for i in range(n):
     ans += comb(rows[i]) + comb(cols[i])
 
-print(ans) 
+print(ans)
