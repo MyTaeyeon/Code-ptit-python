@@ -1,13 +1,7 @@
-def reduce(x):
-    k = 0
-    for i in str(x):
-        k += ord(i) - 48
-    return k
-
-n = int(input())
-ans = 1
-n = reduce(n)
-while n > 9:
-    n = reduce(n)
-    ans += 1
-print(ans)
+s = input()
+cnt = 0
+while(1):
+    cnt += 1
+    s = str( sum[ ord(i) - 48 for i in s ] )
+    if len(s) == 1: break 
+print(cnt)
